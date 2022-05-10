@@ -1,0 +1,11 @@
+rules:
+  - id: fmt.Printf
+    languages: [go]
+    message: fmt.Printf is forbidden outside of cmd and test files
+    pattern: fmt.Printf
+    severity: ERROR
+    paths:
+      exclude:
+        - "*test*.go"
+        - "cmd/*.go"
+        - "cmd/**/*.go"
